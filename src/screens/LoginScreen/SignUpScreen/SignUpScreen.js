@@ -9,7 +9,7 @@ export function SignUpScreen() {
     <View>
       <Text style={styles.title}>FanSoap</Text>
       <View>
-        {/* <SvgXml xml={ic_user} /> */}
+        <SvgXml xml={ic_user} />
         <TextInput
           style={styles.inputText}
           placeholder="Name"
