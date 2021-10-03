@@ -22,7 +22,9 @@ export function SignUpScreen() {
           <TextInput
             style={styles.inputText}
             placeholder="Name"
-          >
+            textContentType='name'
+            autoCapitalize='words'
+            >
           </TextInput>
         </View>
         <View style={styles.focusView} >
@@ -33,10 +35,13 @@ export function SignUpScreen() {
           <TextInput
             style={styles.inputText}
             placeholder="Email Address"
-          >
+            textContentType='emailAddress'
+            autoCapitalize='none'
+            keyboardType='email-address'
+            >
           </TextInput>
         </View>
-        
+
         <View style={styles.focusView} >
           <TouchableOpacity
             style={styles.placeholderIcon}>
@@ -45,7 +50,9 @@ export function SignUpScreen() {
           <TextInput
             style={styles.inputText}
             placeholder="Password"
-          >
+            textContentType='password'
+            secureTextEntry={true}
+            >
           </TextInput>
           <TouchableOpacity
             style={styles.passwordEye}>
@@ -61,6 +68,8 @@ export function SignUpScreen() {
           <TextInput
             style={styles.inputText}
             placeholder="Confirm Password"
+            textContentType='password'
+            secureTextEntry={true}
           >
           </TextInput>
         </View>
@@ -72,7 +81,11 @@ export function SignUpScreen() {
         <Text style={styles.signUpText}>SIGN UP</Text>
       </TouchableOpacity>
 
-      <Text>OR</Text>
+      <View style={styles.orDesignView}>
+        <View style={styles.lineForDesign}></View>
+        <Text style={styles.orText}>OR</Text>
+        <View style={styles.lineForDesign}></View>
+      </View>
 
       <Text>Continue with Google</Text>
 

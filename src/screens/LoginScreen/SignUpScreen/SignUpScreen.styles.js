@@ -35,12 +35,28 @@ export const styles = StyleSheet.create({
     top: 12.5,
   },
   signUpButton: {
-    width: '50%',
-    // marginHorizontal: 50,
+    width: '40%',
     alignSelf: 'center',
-    borderWidth: 2,
+    backgroundColor: '#1C7FB8',
+    borderRadius: 3,
   },
   signUpText: {
     textAlign: 'center',
+    color: 'white',
+    padding: 9,
+  },
+  orDesignView: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    margin: 24,
+  },
+  lineForDesign: {
+    height: 2,
+    width: '45%',
+    backgroundColor: '#1C6E9D',
+    alignSelf: 'center',
+  },
+  orText: {
+    marginHorizontal: 20,
   },
 })
