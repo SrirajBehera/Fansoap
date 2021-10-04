@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   signupScreen:{
-   backgroundColor:"#1A0431",  
+  backgroundColor:"#042131"
   },
   container: {
     margin: 40,
