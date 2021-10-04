@@ -2,12 +2,7 @@ import React from 'react';
 import { Button, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import { styles } from './SignUpScreen.styles';
-import ic_user from '../../../assets/images/ic_user.svg';
-import ic_email from '../../../assets/images/ic_email.svg';
-import ic_password from '../../../assets/images/ic_password.svg';
-import ic_key from '../../../assets/images/ic_key.svg';
-import ic_eye from '../../../assets/images/ic_eye.svg';
-import ic_eye_crossed from '../../../assets/images/ic_eye_crossed.svg';
+import {images} from '../../../constants'
 
 export function SignUpScreen() {
   return (
@@ -17,7 +12,7 @@ export function SignUpScreen() {
         <View style={styles.focusView} >
           <TouchableOpacity
             style={styles.placeholderIcon}>
-            <SvgXml xml={ic_user} />
+            <SvgXml xml={images.user} />
           </TouchableOpacity>
           <TextInput
             style={styles.inputText}
@@ -30,7 +25,7 @@ export function SignUpScreen() {
         <View style={styles.focusView} >
           <TouchableOpacity
             style={styles.placeholderIcon}>
-            <SvgXml xml={ic_email} />
+            <SvgXml xml={images.email} />
           </TouchableOpacity>
           <TextInput
             style={styles.inputText}
@@ -45,7 +40,7 @@ export function SignUpScreen() {
         <View style={styles.focusView} >
           <TouchableOpacity
             style={styles.placeholderIcon}>
-            <SvgXml xml={ic_password} />
+            <SvgXml xml={images.password} />
           </TouchableOpacity>
           <TextInput
             style={styles.inputText}
@@ -56,14 +51,14 @@ export function SignUpScreen() {
           </TextInput>
           <TouchableOpacity
             style={styles.passwordEye}>
-            <SvgXml xml={ic_eye} />
+            <SvgXml xml={images.eye} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.focusView} >
           <TouchableOpacity
             style={styles.placeholderIcon}>
-            <SvgXml xml={ic_key} />
+            <SvgXml xml={images.key} />
           </TouchableOpacity>
           <TextInput
             style={styles.inputText}

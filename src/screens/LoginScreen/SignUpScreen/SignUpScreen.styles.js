@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   inputArea: {
     marginVertical: 40,
