@@ -1,98 +1,117 @@
 import React from 'react';
-import { Button, Text, TextInput, View, TouchableOpacity } from 'react-native';
-import { SvgXml } from 'react-native-svg';
-import { styles } from './SignUpScreen.styles';
-import ic_user from '../../../assets/images/ic_user.svg';
-import ic_email from '../../../assets/images/ic_email.svg';
-import ic_password from '../../../assets/images/ic_password.svg';
-import ic_key from '../../../assets/images/ic_key.svg';
-import ic_eye from '../../../assets/images/ic_eye.svg';
-import ic_eye_crossed from '../../../assets/images/ic_eye_crossed.svg';
+import {
+  Button,
+  Text,
+  TextInput,
+  View,
+  TouchableOpacity,
+  Image,
+  SafeAreaView
+} from 'react-native';
+import {SvgXml} from 'react-native-svg';
+import {styles} from './SignUpScreen.styles';
+import {images, icons} from '../../../constants';
+import LinearGradient from 'react-native-linear-gradient';
 
 export function SignUpScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>FanSoap</Text>
-      <View style={styles.inputArea}>
-        <View style={styles.focusView} >
-          <TouchableOpacity
-            style={styles.placeholderIcon}>
-            <SvgXml xml={ic_user} />
-          </TouchableOpacity>
-          <TextInput
-            style={styles.inputText}
-            placeholder="Name"
-            textContentType='name'
-            autoCapitalize='words'
-            >
-          </TextInput>
-        </View>
-        <View style={styles.focusView} >
-          <TouchableOpacity
-            style={styles.placeholderIcon}>
-            <SvgXml xml={ic_email} />
-          </TouchableOpacity>
-          <TextInput
-            style={styles.inputText}
-            placeholder="Email Address"
-            textContentType='emailAddress'
-            autoCapitalize='none'
-            keyboardType='email-address'
-            >
-          </TextInput>
+     <LinearGradient colors={['#042131', '#111A1F']}>
+       <SafeAreaView>
+      <View style={styles.container}>
+        <Text style={[styles.title, {color: '#FFFFFF'}]}>FanSoap</Text>
+        <View style={styles.inputArea}>
+          <View style={styles.focusView}>
+            <TouchableOpacity style={styles.placeholderIcon}>
+              <SvgXml xml={images.user} />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.bar}>
+              <SvgXml xml={images.lineBar} />
+            </TouchableOpacity>
+            <TextInput
+              style={styles.inputText}
+              placeholder="Name"
+              placeholderTextColor="#B5B5B5"
+              textContentType="name"
+              autoCapitalize="words"></TextInput>
+          </View>
+          <View style={styles.focusView}>
+            <TouchableOpacity style={styles.placeholderIcon}>
+              <SvgXml xml={images.email} />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.bar}>
+              <SvgXml xml={images.lineBar} />
+            </TouchableOpacity>
+            <TextInput
+              style={styles.inputText}
+              placeholder="Email Address"
+              textContentType="emailAddress"
+              placeholderTextColor="#B5B5B5"
+              autoCapitalize="none"
+              keyboardType="email-address"></TextInput>
+          </View>
+
+          <View style={styles.focusView}>
+            <TouchableOpacity style={styles.placeholderIcon}>
+              <SvgXml xml={images.password} />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.bar}>
+              <SvgXml xml={images.lineBar} />
+            </TouchableOpacity>
+            <TextInput
+              style={styles.inputText}
+              placeholder="Password"
+              textContentType="password"
+              placeholderTextColor="#B5B5B5"
+              secureTextEntry={true}></TextInput>
+            <TouchableOpacity style={styles.passwordEye}>
+              <SvgXml xml={images.eye} />
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.focusView}>
+            <TouchableOpacity style={styles.placeholderIcon}>
+              <SvgXml xml={images.key} />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.bar}>
+              <SvgXml xml={images.lineBar} />
+            </TouchableOpacity>
+            <TextInput
+              style={styles.inputText}
+              placeholder="Confirm Password"
+              textContentType="password"
+              placeholderTextColor="#B5B5B5"
+              secureTextEntry={true}></TextInput>
+          </View>
         </View>
 
-        <View style={styles.focusView} >
-          <TouchableOpacity
-            style={styles.placeholderIcon}>
-            <SvgXml xml={ic_password} />
-          </TouchableOpacity>
-          <TextInput
-            style={styles.inputText}
-            placeholder="Password"
-            textContentType='password'
-            secureTextEntry={true}
-            >
-          </TextInput>
-          <TouchableOpacity
-            style={styles.passwordEye}>
-            <SvgXml xml={ic_eye} />
-          </TouchableOpacity>
+        <TouchableOpacity style={styles.signUpButton}>
+          <Text style={styles.signUpText}>SIGN UP</Text>
+        </TouchableOpacity>
+
+        <View style={styles.orDesignView}>
+          <View style={styles.lineForDesign}></View>
+          <Text style={styles.orText}>OR</Text>
+          <View style={styles.lineForDesign}></View>
         </View>
 
-        <View style={styles.focusView} >
-          <TouchableOpacity
-            style={styles.placeholderIcon}>
-            <SvgXml xml={ic_key} />
+        <View style={styles.content}>
+          <Text style={styles.element}>Continue with Google</Text>
+
+          <TouchableOpacity style={styles.element}>
+            <Image
+              source={icons.googleIcon}
+              style={{
+                width: 35,
+                height: 35,
+              }}
+            />
           </TouchableOpacity>
-          <TextInput
-            style={styles.inputText}
-            placeholder="Confirm Password"
-            textContentType='password'
-            secureTextEntry={true}
-          >
-          </TextInput>
+          <Text style={styles.element}>Already have an account?</Text>
+
+          <Text style={styles.signin}>Sign In</Text>
         </View>
       </View>
-
-      <TouchableOpacity
-        style={styles.signUpButton}
-      >
-        <Text style={styles.signUpText}>SIGN UP</Text>
-      </TouchableOpacity>
-
-      <View style={styles.orDesignView}>
-        <View style={styles.lineForDesign}></View>
-        <Text style={styles.orText}>OR</Text>
-        <View style={styles.lineForDesign}></View>
-      </View>
-
-      <Text>Continue with Google</Text>
-
-      <Text>Already have an account?</Text>
-
-      <Text>Sign In</Text>
-
-    </View >
-  )
+      </SafeAreaView>
+    </LinearGradient>       
+  );
 }

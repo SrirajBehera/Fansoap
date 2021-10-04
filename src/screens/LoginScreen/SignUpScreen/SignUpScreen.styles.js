@@ -1,12 +1,27 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+  signupScreen:{
+  backgroundColor:"#042131"
+  },
   container: {
     margin: 40,
   },
+  content:{
+   display:'flex',
+   flexDirection: 'column',
+  },
+  element:{
+    paddingVertical:10,
+    alignSelf:'center',
+    color:'#B5B5B5',
+    fontSize: 17,
+    lineHeight:15,
+  },
   title: {
     fontSize: 20,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   inputArea: {
     marginVertical: 40,
@@ -15,8 +30,10 @@ export const styles = StyleSheet.create({
     width: '80%',
     paddingHorizontal: 10,
     // borderWidth: 2,
-    marginHorizontal: 30,
+    marginHorizontal: 10,
     fontSize: 16,
+    lineHeight: 19,
+    color: "#B5B5B5",
   },
   focusView: {
     flexDirection: 'row',
@@ -27,11 +44,15 @@ export const styles = StyleSheet.create({
     margin: 10,
   },
   placeholderIcon: {
-    top: 12.5,
+    top: 11,
+    left: 15,
+  },
+  bar: {
+    top: 13.5,
     left: 15,
   },
   passwordEye: {
-    right: 60,
+    right: 40,
     top: 12.5,
   },
   signUpButton: {
@@ -58,5 +79,17 @@ export const styles = StyleSheet.create({
   },
   orText: {
     marginHorizontal: 20,
+    color:"#8E8E8E",
   },
+  icon:{
+    width:'35px',
+    height:'35px',
+  },
+  signin: {
+    paddingVertical:10,
+    alignSelf:'center',
+    color:'#38A4E1',
+    fontSize: 17,
+    lineHeight:15,
+  }
 })
