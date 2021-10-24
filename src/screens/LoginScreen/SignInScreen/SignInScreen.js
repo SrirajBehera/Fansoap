@@ -9,7 +9,7 @@ import {
   SafeAreaView
 } from 'react-native';
 import { SvgXml } from 'react-native-svg';
-import { styles } from './SignUpScreen.styles';
+import { styles } from './SignInScreen.styles';
 import { images, icons } from '../../../constants';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -20,20 +20,7 @@ export function SignUpScreen() {
         <View style={styles.container}>
           <Text style={[styles.title, { color: '#FFFFFF' }]}>FanSoap</Text>
           <View style={styles.inputArea}>
-            <View style={styles.focusView}>
-              <TouchableOpacity style={styles.placeholderIcon}>
-                <SvgXml xml={images.user} />
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.bar}>
-                <SvgXml xml={images.lineBar} />
-              </TouchableOpacity>
-              <TextInput
-                style={styles.inputText}
-                placeholder="Name"
-                placeholderTextColor="#B5B5B5"
-                textContentType="name"
-                autoCapitalize="words"></TextInput>
-            </View>
+            
             <View style={styles.focusView}>
               <TouchableOpacity style={styles.placeholderIcon}>
                 <SvgXml xml={images.email} />
@@ -68,24 +55,11 @@ export function SignUpScreen() {
               </TouchableOpacity>
             </View>
 
-            <View style={styles.focusView}>
-              <TouchableOpacity style={styles.placeholderIcon}>
-                <SvgXml xml={images.key} />
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.bar}>
-                <SvgXml xml={images.lineBar} />
-              </TouchableOpacity>
-              <TextInput
-                style={styles.inputText}
-                placeholder="Confirm Password"
-                textContentType="password"
-                placeholderTextColor="#B5B5B5"
-                secureTextEntry={true}></TextInput>
-            </View>
+            
           </View>
 
           <TouchableOpacity style={styles.signUpButton}>
-            <Text style={styles.signUpText}>SIGN UP</Text>
+            <Text style={styles.signUpText}>SIGN IN</Text>
           </TouchableOpacity>
 
           <View style={styles.orDesignView}>
@@ -108,7 +82,7 @@ export function SignUpScreen() {
             </TouchableOpacity>
             <Text style={styles.element}>Already have an account?</Text>
 
-            <Text style={styles.signin}>Sign In</Text>
+            <Text style={styles.signin}>Sign Up</Text>
           </View>
         </View>
       </SafeAreaView>
